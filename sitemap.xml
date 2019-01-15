@@ -1,53 +1,134 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  {% if site.url %}
-    {% if site.baseurl == "" %}
-      {% assign site_url = site.url | append: site.baseurl %}
-    {% elsif site.baseurl == '/site' %}
-      {% assign site_url = site.localhost | append: site.baseurl %}
-    {% else %}
-      {% assign site_url = site.federalist_url | append: site.baseurl %}
-    {% endif %}
-  {% else %}
-    {% assign site_url = site.github.url %}
-  {% endif %}
+  
 
-  {% for post in site.posts %}{% unless post.sitemap == false %}
+  
 
   <url>
-    <loc>{{ post.url | prepend: site_url }}</loc>
-    {% if post.last_modified_at %}
-    <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
-    {% else %}
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-    {% endif %}
+    <loc>https://serviceinnovationlab.github.io//2018/11/30/Rates-Rebate/</loc>
+    
+    <lastmod>2018-11-30T00:00:00+13:00</lastmod>
+    
   </url>
-  {% endunless %}{% endfor %}
-  {% for page in site.html_pages %}{% unless page.sitemap == false %}
+  
+
   <url>
-    <loc>{{ page.url | replace:'/index.html','/' | prepend: site_url }}</loc>
-    {% if page.last_modified_at %}
-    <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
-    {% endif %}
+    <loc>https://serviceinnovationlab.github.io//2018/10/12/Exploring-the-Notice-of-Sale-process/</loc>
+    
+    <lastmod>2018-10-12T00:00:00+13:00</lastmod>
+    
   </url>
-  {% endunless %}{% endfor %}
-  {% for collection in site.collections %}{% unless collection.last.output == false %}
-  {% for doc in collection.last.docs %}{% unless doc.sitemap == false %}
+  
+
   <url>
-    <loc>{{ doc.url | replace:'/index.html','/' | prepend: site_url }}</loc>
-    {% if doc.last_modified_at %}
-    <lastmod>{{ doc.last_modified_at | date_to_xmlschema }}</lastmod>
-    {% endif %}
+    <loc>https://serviceinnovationlab.github.io//2018/08/01/Exploring-Optimistic-Futures-Workshop/</loc>
+    
+    <lastmod>2018-08-01T00:00:00+12:00</lastmod>
+    
   </url>
-  {% endunless %}{% endfor %}
-  {% endunless %}{% endfor %}
-  {% for file in site.html_files %}
+  
+
   <url>
-    <loc>{{ file.path | prepend: site_url }}</loc>
-    <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
+    <loc>https://serviceinnovationlab.github.io//2018/07/01/Lab-Report/</loc>
+    
+    <lastmod>2018-07-01T00:00:00+12:00</lastmod>
+    
   </url>
-  {% endfor %}
+  
+
+  <url>
+    <loc>https://serviceinnovationlab.github.io//2018/06/01/aotearoa-new-zealand-government-innovation-assets-risks-matti-schneider/</loc>
+    
+    <lastmod>2018-06-01T00:00:00+12:00</lastmod>
+    
+  </url>
+  
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//404/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//500/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//author/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//contact/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//expertise/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//blog/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//projects/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//tags/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//tools/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//tags/open-source/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//tags/lessons-learned/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//tags/rates-rebates/</loc>
+    
+  </url>
+  
+  <url>
+    <loc>https://serviceinnovationlab.github.io//search/</loc>
+    
+  </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </urlset>
